@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Text Only Viewer",
+  "description": "This extension is designed to improve readability by stripping away all non-text elements from a webpage, leaving only the text content.",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": {
+      "16": "images/icon.png"
+    }
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
